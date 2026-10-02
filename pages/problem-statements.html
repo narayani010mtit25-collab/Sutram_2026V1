@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=20260907-problem" />
+  <link rel="stylesheet" href="../ps_framework.css" />
 </head>
 
 <body>
@@ -71,7 +72,7 @@
       </div>
 
       <!-- NAVIGATION -->
-      <nav class="primary-nav" aria-label="Primary navigation">
+            <nav class="primary-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
 
         <div class="nav-item">
@@ -80,15 +81,6 @@
             <a href="about.html">About SUTRAM</a>
             <a href="igdtuw.html">IGDTUW</a>
             <a href="collaborators.html">Collaborators</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Event Information <span class="nav-caret">▾</span></button>
-          <div class="nav-dropdown-menu">
-            <a href="guidelines.html">Guidelines &amp; Policies</a>
-            <a href="evaluation.html">Evaluation Criteria</a>
-            <a href="brochure.html">Brochure</a>
             <a href="mentors.html">Mentors</a>
             <a href="jury.html">Jury</a>
             <a href="committee.html">Committee</a>
@@ -97,30 +89,38 @@
         </div>
 
         <div class="nav-item">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Event Information <span class="nav-caret">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a class="active" href="problem-statements.html">Problem Statement</a>
+            <a href="guidelines.html">Guidelines &amp; Policies</a>
+            <a href="evaluation.html">Evaluation Criteria</a>
+            <a href="brochure.html">Brochure</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
           <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Hackathon Journey <span class="nav-caret">▾</span></button>
           <div class="nav-dropdown-menu">
-        <a class="active" href="problem-statements.html">Problem Statements</a>
-        <a href="https://faas.isea.app/formview/Hackathon2026">Registration and PPT Submission</a>
-        <a class="nav-template-link" href="../SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">Download PPT Template</a>
-        <a href="evaluation.html">Evaluation</a>
-        <a href="results.html">Results</a>
-        <div class="nav-dropdown-divider"></div>
-        <span class="nav-dropdown-section-label">Up Next</span>
-        <div class="nav-timeline-inline" data-timeline-panel>
-          <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-15"><span class="nav-timeline-label">Registration / Idea Submission Opens</span><span class="nav-timeline-value" data-date="2026-09-07">7 Sep 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-15"><span class="nav-timeline-label">Registration / Idea Submission Closes</span><span class="nav-timeline-value" data-date="2026-10-15">15 Oct 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="2" data-roll-date="2026-10-25"><span class="nav-timeline-label">First Round Results</span><span class="nav-timeline-value" data-date="2026-10-25">25 Oct 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="3" data-roll-date="2026-10-28"><span class="nav-timeline-label">Problem Statement Release</span><span class="nav-timeline-value" data-date="2026-10-28">28 Oct 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="4" data-roll-date="2026-11-10"><span class="nav-timeline-label">Mentorship Sessions</span><span class="nav-timeline-value" data-date="2026-11-01">1–10 Nov 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="5" data-roll-date="2026-11-20"><span class="nav-timeline-label">Prototype / PPT Submission</span><span class="nav-timeline-value" data-date="2026-11-20">20 Nov 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="6" data-roll-date="2026-12-05"><span class="nav-timeline-label">Final 25 Teams Selected</span><span class="nav-timeline-value" data-date="2026-12-05">5 Dec 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Hackathon Finale</span><span class="nav-timeline-value" data-date="2026-12-26">26–27 Dec 2026</span></div>
-          <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Winner Announcement</span><span class="nav-timeline-value" data-date="2026-12-27">27 Dec 2026</span></div>
-          <p class="nav-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</p>
+            <a href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">Registration and PPT Submission</a>
+            <a href="evaluation.html">Evaluation</a>
+            <a href="results.html">Results</a>
+            <div class="nav-dropdown-divider"></div>
+            <span class="nav-dropdown-section-label">Up Next</span>
+            <div class="nav-timeline-inline" data-timeline-panel>
+              <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-15"><span class="nav-timeline-label">Registration / Idea Submission Opens</span><span class="nav-timeline-value" data-date="2026-09-07">7 Sep 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="1" data-roll-date="2026-10-15"><span class="nav-timeline-label">Registration / Idea Submission Closes</span><span class="nav-timeline-value" data-date="2026-10-15">15 Oct 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="2" data-roll-date="2026-10-25"><span class="nav-timeline-label">First Round Results</span><span class="nav-timeline-value" data-date="2026-10-25">25 Oct 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="3" data-roll-date="2026-10-28"><span class="nav-timeline-label">Problem Statement Release</span><span class="nav-timeline-value" data-date="2026-10-28">28 Oct 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="4" data-roll-date="2026-11-10"><span class="nav-timeline-label">Mentorship Sessions</span><span class="nav-timeline-value" data-date="2026-11-01">1–10 Nov 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="5" data-roll-date="2026-11-20"><span class="nav-timeline-label">Prototype / PPT Submission</span><span class="nav-timeline-value" data-date="2026-11-20">20 Nov 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="6" data-roll-date="2026-12-05"><span class="nav-timeline-label">Final 25 Teams Selected</span><span class="nav-timeline-value" data-date="2026-12-05">5 Dec 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Hackathon Finale</span><span class="nav-timeline-value" data-date="2026-12-26">26–27 Dec 2026</span></div>
+              <div class="nav-timeline-row" data-timeline-group="7" data-roll-date="2026-12-27"><span class="nav-timeline-label">Winner Announcement</span><span class="nav-timeline-value" data-date="2026-12-27">27 Dec 2026</span></div>
+              <p class="nav-timeline-empty" data-timeline-empty hidden>All milestones completed. Thank you for being part of SUTRAM 2026!</p>
+            </div>
+            <a class="nav-dropdown-link" href="timeline.html">View Full Timeline ↗</a>
+          </div>
         </div>
-        <a class="nav-dropdown-link" href="timeline.html">View Full Timeline ↗</a>
-      </div>
-  </div>
 
         <a href="collaborators.html">Collaborators</a>
         <a href="faq.html">FAQ</a>
@@ -164,6 +164,17 @@
                   <span class="framework-key-tag">#IncidentReconstruction</span>
                   <span class="framework-key-tag">#MultiSourceCorrelation</span>
                 </div>
+
+                <div class="framework-actions">
+                  <a class="framework-btn-primary" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Submit Idea / Registration <span>↗</span>
+                  </a>
+                  <a class="framework-btn-secondary" href="../SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download PPT Template
+                  </a>
+                </div>
               </div>
 
               <!-- Right Column: Interactive Digital Forensics Live Simulation Stage -->
@@ -192,9 +203,15 @@
           <span class="section-kicker">READY TO BUILD?</span>
           <h2>Turn the challenge into <span>impact.</span></h2>
         </div>
-        <a class="ps-register-btn" href="https://faas.isea.app/formview/Hackathon2026">
-          Register Now <span>↗</span>
-        </a>
+        <div class="ps-cta-actions">
+          <a class="ps-register-btn" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
+            Submit Idea / Register <span>↗</span>
+          </a>
+          <a class="ps-download-btn" href="../SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download PPT Template
+          </a>
+        </div>
       </section>
 
       <!-- FOOTER -->
@@ -270,7 +287,7 @@
   </div>
 
   <!-- SLIDE-OUT MENU -->
-  <nav class="nav-drawer" id="navDrawer" aria-label="Site navigation" aria-hidden="true" role="dialog">
+    <nav class="nav-drawer" id="navDrawer" aria-label="Site navigation" aria-hidden="true" role="dialog">
     <div class="drawer-header">
       <span class="drawer-title">Main Menu</span>
       <button type="button" class="close-drawer" id="closeDrawer" aria-label="Close menu">&times;</button>
@@ -283,17 +300,8 @@
         <ul class="drawer-sublist">
           <li class="drawer-sublist-label">About</li>
           <li><a href="about.html">About SUTRAM</a></li>
+          <li><a href="igdtuw.html">IGDTUW</a></li>
           <li><a href="collaborators.html">Collaborators</a></li>
-        </ul>
-      </li>
-
-      <li class="drawer-group">
-        <button type="button" class="drawer-group-toggle" aria-expanded="false">Event Information <span class="drawer-group-caret">▾</span></button>
-        <ul class="drawer-sublist">
-          <li class="drawer-sublist-label">Event Information</li>
-          <li><a href="guidelines.html">Guidelines &amp; Policies</a></li>
-          <li><a href="evaluation.html">Evaluation Criteria</a></li>
-          <li><a href="brochure.html">Brochure</a></li>
           <li><a href="mentors.html">Mentors</a></li>
           <li><a href="jury.html">Jury</a></li>
           <li><a href="committee.html">Committee</a></li>
@@ -302,12 +310,21 @@
       </li>
 
       <li class="drawer-group">
+        <button type="button" class="drawer-group-toggle" aria-expanded="false">Event Information <span class="drawer-group-caret">▾</span></button>
+        <ul class="drawer-sublist">
+          <li class="drawer-sublist-label">Event Information</li>
+          <li><a class="active" href="problem-statements.html">Problem Statement</a></li>
+          <li><a href="guidelines.html">Guidelines &amp; Policies</a></li>
+          <li><a href="evaluation.html">Evaluation Criteria</a></li>
+          <li><a href="brochure.html">Brochure</a></li>
+        </ul>
+      </li>
+
+      <li class="drawer-group">
         <button type="button" class="drawer-group-toggle" aria-expanded="false">Hackathon Journey <span class="drawer-group-caret">▾</span></button>
         <ul class="drawer-sublist" data-timeline-panel>
           <li class="drawer-sublist-label">Hackathon Journey</li>
-          <li><a class="active" href="problem-statements.html">Problem Statements</a></li>
-          <li><a href="https://faas.isea.app/formview/Hackathon2026">Registration and PPT Submission</a></li>
-          <li><a class="drawer-template-link" href="../SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">Download PPT Template</a></li>
+          <li><a href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">Registration and PPT Submission</a></li>
           <li><a href="evaluation.html">Evaluation</a></li>
           <li><a href="results.html">Results</a></li>
           <li class="drawer-sublist-divider">Up Next</li>
@@ -326,7 +343,7 @@
       </li>
 
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="https://faas.isea.app/formview/Hackathon2026" rel="noopener">Register</a></li>
+      <li><a href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">Register</a></li>
     </ul>
   </nav>
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>

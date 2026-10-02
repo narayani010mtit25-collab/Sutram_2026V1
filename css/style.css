@@ -5,6 +5,8 @@
   --blue: #2c7be5;
   --blue-light: #6fb1ff;
   --gold: #d9a441;
+  --ps-gold: #f5b400;
+  --ps-gold-light: #ffd45a;
   --paper: #f7f8fb;
   --line: #dde3ee;
   --muted: #5a6b85;
@@ -5829,6 +5831,114 @@ body.error-page {
 
 .ps-register-btn span {
   font-size: 17px;
+}
+
+.ps-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.ps-download-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  text-decoration: none;
+  font: 800 12px "Space Grotesk", sans-serif;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.ps-download-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffd45a;
+}
+
+.framework-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(15, 43, 72, 0.1);
+}
+
+.framework-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0e2247 0%, #1e3a8a 100%);
+  color: #ffffff;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(14, 34, 71, 0.25);
+  transition: all 0.2s ease;
+}
+
+.framework-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 34, 71, 0.35);
+  color: #ffffff;
+}
+
+.framework-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(22, 139, 183, 0.08);
+  border: 1px solid rgba(22, 139, 183, 0.3);
+  color: #0c2340;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.framework-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(22, 139, 183, 0.18);
+  border-color: #168bb7;
+  color: #075985;
+}
+
+[data-theme="dark"] .framework-actions {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .framework-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+[data-theme="dark"] .framework-btn-secondary {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .framework-btn-secondary:hover {
+  background: rgba(56, 189, 248, 0.22);
+  color: #7dd3fc;
 }
 
 /* ================= MOBILE ================= */
@@ -14674,9 +14784,18 @@ html[data-theme="light"] .track {
 }
 
 /* Keep the registration CTA readable on its dark surface. */
+.ps-cta .section-kicker,
 [data-theme="light"] .ps-cta .section-kicker,
 [data-theme="dark"] .ps-cta .section-kicker {
-  color: var(--ps-gold) !important;
+  display: inline-block !important;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #ffd45a !important;
+  text-shadow: 0 0 16px rgba(255, 212, 90, 0.45);
+  margin-bottom: 6px;
 }
 
 [data-theme="light"] .ps-cta h2,
