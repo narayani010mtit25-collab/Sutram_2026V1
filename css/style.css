@@ -13002,6 +13002,362 @@ html[data-theme="light"] .track {
   border-color: rgba(0, 229, 255, 0.25) !important;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   CURRENT STAGE CARD (Timeline page active stage + mini-timeline)
+   ═══════════════════════════════════════════════════════════════ */
+.stage-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(22, 139, 183, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(14, 34, 71, 0.09);
+  padding: clamp(22px, 4vw, 36px) clamp(20px, 4vw, 36px);
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(22, 139, 183, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Header row */
+.stage-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.stage-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LIVE badge */
+.stage-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 8px;
+  border-radius: 999px;
+  background: rgba(0, 214, 143, 0.12);
+  border: 1px solid rgba(0, 214, 143, 0.35);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00a86b;
+}
+
+.stage-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00d68f;
+  animation: stage-pulse 1.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes stage-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+.stage-card-phase {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0077b6;
+  background: rgba(0, 119, 182, 0.1);
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.stage-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #168bb7 0%, #0077b6 100%);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(22, 139, 183, 0.3);
+  white-space: nowrap;
+}
+
+.stage-card-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 139, 183, 0.4);
+}
+
+/* Stage title */
+.stage-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 800;
+  color: #0e2247;
+  margin: 0 0 24px;
+  letter-spacing: -0.01em;
+}
+
+/* ── Mini horizontal timeline ── */
+.stage-mini-timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.stage-mini-track {
+  flex: 1;
+  min-width: 24px;
+  height: 2px;
+  background: #0077b6;
+  position: relative;
+}
+
+.stage-mini-track--future {
+  background: rgba(14, 34, 71, 0.12);
+}
+
+.stage-milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.stage-milestone-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.stage-milestone--done .stage-milestone-dot {
+  background: #0077b6;
+  border: 3px solid #0077b6;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.stage-milestone--active .stage-milestone-dot {
+  width: 18px;
+  height: 18px;
+  background: #f5a623;
+  border: 3px solid #f5a623;
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.2);
+  animation: stage-active-pulse 2s ease-in-out infinite;
+}
+
+@keyframes stage-active-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.2); }
+  50%       { box-shadow: 0 0 0 8px rgba(245, 166, 35, 0.08); }
+}
+
+.stage-milestone--future .stage-milestone-dot {
+  background: #ffffff;
+  border: 3px solid rgba(14, 34, 71, 0.2);
+}
+
+.stage-milestone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+  max-width: 120px;
+}
+
+.stage-milestone-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a7ea8;
+}
+
+.stage-milestone--active .stage-milestone-label {
+  color: #d08000;
+}
+
+.stage-milestone-date {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  color: #0e2247;
+}
+
+.stage-milestone--active .stage-milestone-date {
+  color: #f5a623;
+}
+
+.stage-milestone--future .stage-milestone-date {
+  color: #94a9be;
+}
+
+/* ── Countdown row ── */
+.stage-countdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(14, 34, 71, 0.08);
+  flex-wrap: wrap;
+}
+
+.stage-countdown-label-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stage-countdown-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5a623;
+}
+
+.stage-countdown-date-display {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #5a7ea8;
+}
+
+/* Inline countdown inside stage card: strip the card look */
+.stage-card .vtl-countdown.vtl-countdown-inline {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.stage-card .vtl-countdown-clock {
+  margin: 0 !important;
+}
+
+.stage-card .vtl-countdown-unit {
+  background: rgba(14, 34, 71, 0.04) !important;
+  border: 1.5px solid rgba(22, 139, 183, 0.18) !important;
+  min-width: clamp(56px, 12vw, 80px) !important;
+  padding: 8px 4px 10px !important;
+}
+
+.stage-card .vtl-countdown-value {
+  font-size: clamp(24px, 5vw, 40px) !important;
+  color: #0e2247 !important;
+}
+
+.stage-card .vtl-countdown-unit-label {
+  color: #5a7ea8 !important;
+}
+
+.stage-card .vtl-countdown-sep {
+  color: rgba(22, 139, 183, 0.4) !important;
+  font-size: clamp(18px, 3.5vw, 30px) !important;
+}
+
+/* ── Dark mode overrides ── */
+[data-theme="dark"] .stage-card {
+  background: rgba(10, 28, 55, 0.95);
+  border-color: rgba(0, 180, 216, 0.2);
+}
+
+[data-theme="dark"] .stage-card-title {
+  color: #e8f4ff;
+}
+
+[data-theme="dark"] .stage-milestone-date {
+  color: #c9e0f5;
+}
+
+[data-theme="dark"] .stage-milestone--future .stage-milestone-date {
+  color: #4a6a8a;
+}
+
+[data-theme="dark"] .stage-mini-track--future {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .stage-milestone--future .stage-milestone-dot {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .stage-countdown-row {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .stage-card .vtl-countdown-value {
+  color: #e8f4ff !important;
+}
+
+[data-theme="dark"] .stage-card .vtl-countdown-unit {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(0, 229, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .stage-card .vtl-countdown-unit-label {
+  color: #7aafcc !important;
+}
+
+[data-theme="dark"] .stage-countdown-date-display {
+  color: #7aafcc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stage-card-header {
+    flex-wrap: wrap;
+  }
+  .stage-mini-timeline {
+    gap: 4px;
+  }
+  .stage-mini-track {
+    min-width: 16px;
+  }
+  .stage-milestone-content {
+    max-width: 90px;
+  }
+  .stage-milestone-label {
+    font-size: 9px;
+  }
+  .stage-milestone-date {
+    font-size: 11px;
+  }
+  .stage-countdown-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+
 /* ══════════════════════════════════════════════════════════════════
    EVENT BROCHURE DOWNLOAD & VIEWER SHOWCASE
    ══════════════════════════════════════════════════════════════════ */

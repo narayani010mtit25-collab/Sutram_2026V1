@@ -136,31 +136,63 @@
     </div>
   </section>
 
-  <!-- ACTIVE STAGE + COUNTDOWN TO NEXT MILESTONE -->
+  <!-- CURRENT STAGE CARD -->
   <section class="subpage-section subpage-section-flush">
     <div class="subpage-container">
 
-      <!-- Active Stage Banner -->
-      <div class="vtl-active-stage-banner" id="activeStageTimer">
-        <div class="vtl-active-stage-header">
-          <span class="vtl-active-stage-live">
-            <span class="vtl-live-pulse"></span>
-            LIVE STAGE
-          </span>
-          <span class="vtl-active-stage-name" data-vtl-active-stage-name>Registration / Idea Submission</span>
-          <a class="vtl-active-stage-cta" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener" data-vtl-active-stage-cta>
+      <div class="stage-card" id="activeStageTimer">
+
+        <!-- Header row -->
+        <div class="stage-card-header">
+          <div class="stage-card-header-left">
+            <span class="stage-live-badge">
+              <span class="stage-live-dot"></span>
+              LIVE NOW
+            </span>
+            <span class="stage-card-phase">Phase 1</span>
+          </div>
+          <a class="stage-card-cta" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
             Submit Now ↗
           </a>
         </div>
 
-        <div class="vtl-active-stage-body">
-          <div class="vtl-active-stage-info">
-            <span class="vtl-active-stage-info-label">Deadline</span>
-            <span class="vtl-active-stage-info-value" data-vtl-countdown-date>—</span>
+        <!-- Stage title -->
+        <h2 class="stage-card-title">Registration &amp; Idea Submission</h2>
+
+        <!-- Mini-timeline for this stage -->
+        <div class="stage-mini-timeline">
+          <div class="stage-milestone stage-milestone--done">
+            <div class="stage-milestone-dot"></div>
+            <div class="stage-milestone-content">
+              <span class="stage-milestone-label">Registration Opens</span>
+              <span class="stage-milestone-date">07 Sep 2026</span>
+            </div>
           </div>
-          <div class="vtl-active-stage-divider"></div>
+          <div class="stage-mini-track"></div>
+          <div class="stage-milestone stage-milestone--active">
+            <div class="stage-milestone-dot"></div>
+            <div class="stage-milestone-content">
+              <span class="stage-milestone-label">Submission Deadline</span>
+              <span class="stage-milestone-date">20 Oct 2026</span>
+            </div>
+          </div>
+          <div class="stage-mini-track stage-mini-track--future"></div>
+          <div class="stage-milestone stage-milestone--future">
+            <div class="stage-milestone-dot"></div>
+            <div class="stage-milestone-content">
+              <span class="stage-milestone-label">First Round Results</span>
+              <span class="stage-milestone-date">25 Oct 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown to deadline -->
+        <div class="stage-countdown-row">
+          <div class="stage-countdown-label-wrap">
+            <span class="stage-countdown-eyebrow">Closes in</span>
+            <span class="stage-countdown-date-display" data-vtl-countdown-date></span>
+          </div>
           <div class="vtl-countdown vtl-countdown-inline" data-vtl-countdown>
-            <span class="vtl-countdown-label" data-vtl-countdown-label>Closes in</span>
             <div class="vtl-countdown-clock">
               <div class="vtl-countdown-unit">
                 <span class="vtl-countdown-value" data-vtl-countdown-days>00</span>
@@ -184,6 +216,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
