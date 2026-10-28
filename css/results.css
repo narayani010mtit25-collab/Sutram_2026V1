@@ -1,0 +1,836 @@
+/* ══════════════════════════════════════════════════════════════════
+   SUTRAM 2026 — EXCITING RESULTS & SHORTLIST PAGE STYLES
+   Animated Cyber Celebration Background, Official PDF Document Showcase,
+   Celebration Metrics & Next-Steps Roadmap
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Background Canvas covering the results experience */
+.results-canvas-wrap {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#resultsBgCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Ensure results page elements stack properly over canvas */
+.results-page-main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Results Hero Section */
+.results-hero {
+  position: relative;
+  padding: clamp(48px, 6vw, 76px) 20px clamp(36px, 4vw, 52px);
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(247, 248, 251, 0) 70%);
+  overflow: hidden;
+}
+
+.results-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.results-celebration-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.10);
+  border: 1px solid rgba(16, 185, 129, 0.30);
+  color: #059669;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.12);
+  animation: pulseBeacon 2.4s infinite ease-in-out;
+}
+
+.results-radar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: radarBlink 1.4s infinite ease-in-out;
+}
+
+.results-hero h1 {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #0c2340;
+  margin: 0 0 16px 0;
+}
+
+.results-hero h1 .highlight-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.results-hero-lead {
+  font-size: clamp(15.5px, 1.8vw, 18px);
+  line-height: 1.7;
+  color: #0f172a;
+  font-weight: 500;
+  max-width: 820px;
+  margin: 0 auto 28px;
+}
+
+/* Hero Quick Badges Row */
+.results-quick-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.quick-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: 0 2px 10px rgba(15, 43, 72, 0.08);
+}
+
+.quick-badge-item .badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  flex-shrink: 0;
+}
+
+.quick-badge-item.highlight-tomorrow {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.quick-badge-item.highlight-tomorrow .badge-dot {
+  background: #dc2626;
+  box-shadow: 0 0 8px #dc2626;
+}
+
+/* Main Container */
+.results-container {
+  max-width: 1080px;
+  margin: 0 auto clamp(40px, 5vw, 60px);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   FEATURE CARD: OFFICIAL SHORTLIST PDF (RELEASING TOMORROW)
+   ══════════════════════════════════════════════════════════════════ */
+.pdf-release-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  border: 2px solid rgba(37, 99, 235, 0.18);
+  box-shadow: 0 16px 48px rgba(15, 43, 72, 0.09), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  padding: clamp(26px, 4vw, 42px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pdf-release-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ef4444, #f59e0b, #2563eb, #10b981);
+}
+
+.pdf-card-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(20px, 3.5vw, 36px);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .pdf-card-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* 3D PDF Document Icon Preview */
+.pdf-icon-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(120px, 16vw, 150px);
+  height: clamp(150px, 20vw, 190px);
+  background: #ffffff;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.pdf-icon-preview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 26px 26px 0;
+  border-color: transparent #e2e8f0 transparent transparent;
+}
+
+.pdf-badge-tag {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: #ffffff;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(239, 68, 68, 0.35);
+  margin-top: 10px;
+}
+
+.pdf-preview-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 60%;
+  margin-top: 14px;
+}
+
+.pdf-preview-line {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+.pdf-preview-line.short {
+  width: 60%;
+}
+
+.pdf-icon-preview svg {
+  color: #ef4444;
+}
+
+/* Card Content Details */
+.pdf-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pdf-eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .pdf-eyebrow-row {
+    justify-content: center;
+  }
+}
+
+.pdf-type-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  background: #dbeafe;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #93c5fd;
+}
+
+.pdf-tomorrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1.5px solid #ef4444;
+  padding: 4px 14px;
+  border-radius: 999px;
+  animation: pulseBeacon 2s infinite ease-in-out;
+}
+
+.pdf-card-info h2 {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 900;
+  color: #0c2340;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.pdf-card-info p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #0f172a;
+  font-weight: 450;
+  margin: 0;
+}
+
+/* Metadata chips */
+.pdf-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13.5px;
+  color: #334155;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .pdf-meta-list {
+    justify-content: center;
+  }
+}
+
+.pdf-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: var(--font-mono, monospace);
+  color: #1e293b;
+}
+
+.pdf-meta-item strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Actions */
+.pdf-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .pdf-actions-row {
+    justify-content: center;
+  }
+}
+
+.btn-pdf-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  border: 1.5px dashed #94a3b8;
+  color: #475569;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: not-allowed;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pdf-pending .lock-badge {
+  background: #e2e8f0;
+  color: #64748b;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+}
+
+.btn-explore-ps-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff !important;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-explore-ps-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
+}
+
+.btn-pdf-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff !important;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  font-size: 14.5px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-pdf-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+}
+
+.btn-pdf-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1e293b !important;
+  border: 1.5px solid #cbd5e1;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  font-size: 14.5px;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-pdf-view:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.pdf-released-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #065f46;
+  background: #d1fae5;
+  border: 1.5px solid #10b981;
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.results-pdf-embed-wrapper {
+  margin-top: 28px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 43, 72, 0.12);
+  box-shadow: 0 10px 30px rgba(15, 43, 72, 0.08);
+  background: #ffffff;
+}
+
+.results-pdf-embed-bar {
+  background: #0f172a;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-family: var(--font-heading, sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.results-pdf-embed-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-pdf-embed-link {
+  color: #60a5fa !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.results-pdf-embed-link:hover {
+  text-decoration: underline;
+}
+
+.results-pdf-iframe {
+  width: 100%;
+  height: 780px;
+  border: none;
+  display: block;
+}
+
+[data-theme="dark"] .btn-pdf-view {
+  background: #0f172a;
+  color: #f8fafc !important;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .btn-pdf-view:hover {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+[data-theme="dark"] .pdf-released-pill {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+[data-theme="dark"] .results-pdf-embed-wrapper {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: #0b172a;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CELEBRATION METRICS GRID (4 TILES)
+   ══════════════════════════════════════════════════════════════════ */
+.results-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.metric-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 43, 72, 0.08);
+  box-shadow: 0 4px 18px rgba(15, 43, 72, 0.04);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 43, 72, 0.08);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.metric-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.metric-card:nth-child(1) .metric-icon-bubble { background: #eff6ff; color: #2563eb; }
+.metric-card:nth-child(2) .metric-icon-bubble { background: #f0fdf4; color: #16a34a; }
+.metric-card:nth-child(3) .metric-icon-bubble { background: #faf5ff; color: #9333ea; }
+.metric-card:nth-child(4) .metric-icon-bubble { background: #fff7ed; color: #ea580c; }
+
+.metric-pill {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.metric-value {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 32px;
+  font-weight: 900;
+  color: #0c2340;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   NEXT STEPS ROADMAP FOR SHORTLISTED TEAMS
+   ══════════════════════════════════════════════════════════════════ */
+.roadmap-card {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid rgba(15, 43, 72, 0.08);
+  box-shadow: 0 6px 24px rgba(15, 43, 72, 0.05);
+  padding: clamp(26px, 3.5vw, 36px);
+}
+
+.roadmap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(15, 43, 72, 0.08);
+}
+
+.roadmap-header h3 {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0c2340;
+  margin: 0;
+}
+
+.roadmap-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.roadmap-step {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.roadmap-step:hover {
+  background: #ffffff;
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 6px 18px rgba(15, 43, 72, 0.06);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.step-date {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.step-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c2340;
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   TEAM ADVISORY / CONTACT BOX
+   ══════════════════════════════════════════════════════════════════ */
+.advisory-box {
+  background: #eff6ff;
+  border-radius: 18px;
+  border: 1px solid #bfdbfe;
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.advisory-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.advisory-content h4 {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 6px 0;
+}
+
+.advisory-content p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #2563eb;
+  margin: 0;
+}
+
+.advisory-content a {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   DARK THEME STYLES
+   ══════════════════════════════════════════════════════════════════ */
+[data-theme="dark"] .results-hero {
+  background: radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.15) 0%, rgba(14, 26, 48, 0) 70%);
+}
+
+[data-theme="dark"] .results-hero h1 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .results-hero-lead {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .quick-badge-item {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .pdf-release-card {
+  background: linear-gradient(145deg, #0e1e38 0%, #091326 100%);
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .pdf-card-info h2 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .pdf-card-info p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .pdf-icon-preview {
+  background: #0b172a;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+[data-theme="dark"] .pdf-meta-item strong {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .btn-pdf-pending {
+  background: #1e293b;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .btn-pdf-pending .lock-badge {
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .metric-card,
+[data-theme="dark"] .roadmap-card {
+  background: #0d1b2f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .metric-value,
+[data-theme="dark"] .roadmap-header h3,
+[data-theme="dark"] .step-title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .roadmap-step {
+  background: #091424;
+  border-color: #1e293b;
+}
+
+[data-theme="dark"] .advisory-box {
+  background: rgba(30, 58, 138, 0.25);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+[data-theme="dark"] .advisory-content h4 {
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .advisory-content p {
+  color: #bfdbfe;
+}

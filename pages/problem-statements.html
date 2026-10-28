@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <script>(function(){try{if(!localStorage.getItem("sutram-theme-v2")){localStorage.setItem("sutram-theme","light");localStorage.setItem("sutram-theme-v2","1");}var t=localStorage.getItem("sutram-theme");if(t!=="light"&&t!=="dark"){t="light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
@@ -61,14 +61,21 @@
         </button>
       </header>
 
-      <!-- ANNOUNCEMENT -->
+      <!-- ANNOUNCEMENT MARQUEE -->
       <div class="notification-marquee">
-        <div class="marquee-css"><span class="marquee-css-track">
-          <span class="marquee-text">
-            Welcome to SUTRAM 2026 — The Premier AI-Powered Cyber Investigation &amp; Digital Forensics
-            <span class="highlight">HACKATHON</span>! Get ready to innovate, investigate, and inspire justice!
+        <div class="marquee-css">
+          <span class="marquee-css-track">
+            <a href="results.html" class="marquee-badge-link pulse-accent"><span class="marquee-pill-dot"></span> Round 1 Results Announced &mdash; Click to View Shortlisted Teams &rarr;</a>
+            <span class="marquee-divider">✦</span>
+            <a href="problem-statements.html" class="marquee-badge-link">Problem Statements for Round 2 are LIVE &mdash; View Challenges &rarr;</a>
+            <span class="marquee-divider">✦</span>
+            <span class="marquee-text">Welcome to SUTRAM 2026 &mdash; The Premier AI-Powered Indigenous Cyber Investigation &amp; Digital Forensics <span class="highlight">HACKATHON</span>!</span>
+            <span class="marquee-divider">✦</span>
+            <a href="results.html" class="marquee-badge-link pulse-accent"><span class="marquee-pill-dot"></span> Round 1 Results Announced &mdash; Click to View Shortlisted Teams &rarr;</a>
+            <span class="marquee-divider">✦</span>
+            <a href="problem-statements.html" class="marquee-badge-link">Problem Statements for Round 2 are LIVE &mdash; View Challenges &rarr;</a>
           </span>
-        </span></div> 
+        </div> 
       </div>
 
       <!-- NAVIGATION -->
@@ -142,59 +149,282 @@
       <section class="subpage-section">
         <div class="subpage-container framework-showcase-container">
 
-          <!-- Main Hero Poster Card with Live Simulation -->
-          <article class="framework-main-card">
-            <span class="framework-badge-pill">Problem Statement // Flagship Challenge</span>
-
-            <div class="framework-hero-split">
-              <!-- Left Column: Content & Description -->
-              <div class="framework-text-col">
-                <h2>Building an AI-Powered Indigenous <span class="hl-gradient">Digital Forensics</span> Investigation Framework</h2>
-                <p class="framework-desc-lead">
-                  Develop an AI-powered digital forensics investigation framework capable of collecting, analysing, authenticating, and correlating digital evidence from multiple sources.
-                </p>
-                <p class="framework-desc-sub">
-                  The framework should assist investigators in efficiently handling complex digital evidence, identifying patterns and anomalies, verifying evidence integrity and origin, detecting fraud and manipulation, and reconstructing incidents from correlated evidence.
-                </p>
-
-                <div class="framework-key-tags">
-                  <span class="framework-key-tag">#DigitalForensics</span>
-                  <span class="framework-key-tag">#ArtificialIntelligence</span>
-                  <span class="framework-key-tag">#EvidenceAuthentication</span>
-                  <span class="framework-key-tag">#IncidentReconstruction</span>
-                  <span class="framework-key-tag">#MultiSourceCorrelation</span>
-                </div>
-
-                <div class="framework-actions">
-                  <a class="framework-btn-primary" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    Submit Idea / Registration <span>↗</span>
-                  </a>
-                  <a class="framework-btn-secondary" href="../SUTRAM_2026_Idea_Submission_Template.pptx" download="SUTRAM_2026_Idea_Submission_Template.pptx">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Download PPT Template
-                  </a>
-                </div>
-              </div>
-
-              <!-- Right Column: Interactive Digital Forensics Live Simulation Stage -->
-              <div class="forensics-stage-wrap">
-                <div class="forensics-stage-header">
-                  <span><span class="live-dot"></span>INVESTIGATION PIPELINE SIMULATION</span>
-                  <span>AI v2.6</span>
-                </div>
-                <canvas id="frameworkCanvas" width="440" height="330" aria-label="Live AI Digital Forensics Investigation Framework Simulation"></canvas>
-                <div class="forensics-stage-caption">
-                  Human Intelligence &times; AI Forensics &times; Evidence Pipeline
-                </div>
-              </div>
+          <!-- THEME & BACKGROUND OVERVIEW CARD -->
+          <article class="ps-theme-overview-card">
+            <div class="ps-theme-eyebrow">
+              <span class="ps-radar-dot"></span> NATIONAL HACKATHON THEME &amp; BACKGROUND
+            </div>
+            <h2>Theme: AI-Powered Digital Investigation and Cyber Forensics Technologies for India</h2>
+            <p class="ps-theme-bg-text">
+              India is witnessing unprecedented growth in cyber-enabled crimes, including financial frauds, social media crimes, ransomware incidents, digital impersonation, deepfake-enabled offences, online radicalization, and crimes involving encrypted communication platforms. Investigating agencies and forensic laboratories are increasingly challenged by the volume, diversity, and complexity of digital evidence generated from mobile devices, cloud services, social media platforms, multimedia content, and emerging technologies.
+            </p>
+            <p class="ps-theme-bg-subtext">
+              The proposed National Hackathon aims to develop indigenous, AI-enabled cyber forensic solutions that assist Law Enforcement Agencies (LEAs), Cyber Crime Investigation Units, Forensic Science Laboratories (FSLs), and judicial stakeholders in acquisition, analysis, correlation, reconstruction, and reporting of digital evidence while maintaining forensic integrity.
+            </p>
+            <div class="ps-theme-actions">
+              <a class="ps-btn-download" href="../SUTRAM_2026_Problem_Statements.pdf?v=20261028" download="SUTRAM_2026_Problem_Statements.pdf">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Problem Statements (PDF)
+                <span class="ps-btn-badge">Official Document</span>
+              </a>
+              <a class="ps-btn-secondary" href="../SUTRAM_2026_Problem_Statements.pdf?v=20261028" target="_blank" rel="noopener">
+                View PDF ↗
+              </a>
+              <a class="ps-btn-secondary" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
+                Submit Idea / Register ↗
+              </a>
             </div>
           </article>
 
+          <!-- PS CARDS GRID: PS01 - PS05 (ALL EXACTLY SAME SIZE) -->
+          <!-- PS CARDS GRID: PS01 - PS05 -->
+          <div class="ps-cards-section">
+            <div class="ps-cards-grid">
 
+              <!-- PS01 -->
+              <article class="problem-card" data-ps="ps01" id="ps01" role="button" tabindex="0" aria-label="View details for PS01: AI-Assisted Mobile Evidence Intelligence Platform">
+                <div class="ps-card-media">
+                  <img src="../assets/images/problem-statements/ps01_mobile_forensics.jpg" alt="AI-Assisted Mobile Evidence Intelligence Platform" class="ps-card-img" loading="lazy" />
+                  <div class="ps-media-overlay">
+                    <span class="ps-media-badge"><span class="ps-media-dot"></span> Round 2 Live</span>
+                  </div>
+                </div>
+                <div class="ps-card-body">
+                  <p class="ps-label"><span class="ps-label-id">SUTRAMPS01</span> &middot; PROBLEM STATEMENT 1</p>
+                  <h3>AI-Assisted Mobile Evidence Intelligence Platform</h3>
+                  <p class="ps-desc">Mobile phones constitute the primary source of evidence in cybercrime investigations. Automated parsing, deleted activity recovery, and behavioural profiling.</p>
+                  <div class="ps-card-footer">
+                    <div class="ps-card-tags">
+                      <span>#MobileForensics</span>
+                      <span>#Timeline</span>
+                    </div>
+                    <button type="button" class="ps-view-btn" data-open-ps="ps01" aria-label="View details for Problem Statement 1">View details &rarr;</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PS02 -->
+              <article class="problem-card" data-ps="ps02" id="ps02" role="button" tabindex="0" aria-label="View details for PS02: Multimedia Evidence Authentication, Deepfake Detection and Provenance Analysis Framework">
+                <div class="ps-card-media">
+                  <img src="../assets/images/problem-statements/ps02_deepfake_detection.jpg" alt="Multimedia Evidence Authentication, Deepfake Detection and Provenance Analysis Framework" class="ps-card-img" loading="lazy" />
+                  <div class="ps-media-overlay">
+                    <span class="ps-media-badge"><span class="ps-media-dot"></span> Round 2 Live</span>
+                  </div>
+                </div>
+                <div class="ps-card-body">
+                  <p class="ps-label"><span class="ps-label-id">SUTRAMPS02</span> &middot; PROBLEM STATEMENT 2</p>
+                  <h3>Multimedia Evidence Authentication, Deepfake Detection and Provenance Analysis Framework</h3>
+                  <p class="ps-desc">Reliable tools to authenticate multimedia evidence, detect AI-generated deepfakes, identify media tampering, and establish evidentiary provenance.</p>
+                  <div class="ps-card-footer">
+                    <div class="ps-card-tags">
+                      <span>#Deepfake</span>
+                      <span>#Provenance</span>
+                    </div>
+                    <button type="button" class="ps-view-btn" data-open-ps="ps02" aria-label="View details for Problem Statement 2">View details &rarr;</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PS03 -->
+              <article class="problem-card" data-ps="ps03" id="ps03" role="button" tabindex="0" aria-label="View details for PS03: Digital Evidence Correlation and Crime Reconstruction Engine">
+                <div class="ps-card-media">
+                  <img src="../assets/images/problem-statements/ps03_crime_reconstruction.jpg" alt="Digital Evidence Correlation and Crime Reconstruction Engine" class="ps-card-img" loading="lazy" />
+                  <div class="ps-media-overlay">
+                    <span class="ps-media-badge"><span class="ps-media-dot"></span> Round 2 Live</span>
+                  </div>
+                </div>
+                <div class="ps-card-body">
+                  <p class="ps-label"><span class="ps-label-id">SUTRAMPS03</span> &middot; PROBLEM STATEMENT 3</p>
+                  <h3>Digital Evidence Correlation and Crime Reconstruction Engine</h3>
+                  <p class="ps-desc">Automated evidence correlation platform across heterogeneous sources to construct temporal-spatial relationships and reconstruct crime scenes.</p>
+                  <div class="ps-card-footer">
+                    <div class="ps-card-tags">
+                      <span>#KnowledgeGraph</span>
+                      <span>#Timeline</span>
+                    </div>
+                    <button type="button" class="ps-view-btn" data-open-ps="ps03" aria-label="View details for Problem Statement 3">View details &rarr;</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PS04 -->
+              <article class="problem-card" data-ps="ps04" id="ps04" role="button" tabindex="0" aria-label="View details for PS04: AI-Powered Cyber Fraud Investigation and Attribution System">
+                <div class="ps-card-media">
+                  <img src="../assets/images/problem-statements/ps04_cyber_fraud.jpg" alt="AI-Powered Cyber Fraud Investigation and Attribution System" class="ps-card-img" loading="lazy" />
+                  <div class="ps-media-overlay">
+                    <span class="ps-media-badge"><span class="ps-media-dot"></span> Round 2 Live</span>
+                  </div>
+                </div>
+                <div class="ps-card-body">
+                  <p class="ps-label"><span class="ps-label-id">SUTRAMPS04</span> &middot; PROBLEM STATEMENT 4</p>
+                  <h3>AI-Powered Cyber Fraud Investigation and Attribution System</h3>
+                  <p class="ps-desc">Investigate financial frauds involving UPI, mule accounts, SIM swapping, and phishing through entity resolution and transaction flow analysis.</p>
+                  <div class="ps-card-footer">
+                    <div class="ps-card-tags">
+                      <span>#FraudAttribution</span>
+                      <span>#EntityResolution</span>
+                    </div>
+                    <button type="button" class="ps-view-btn" data-open-ps="ps04" aria-label="View details for Problem Statement 4">View details &rarr;</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- PS05 -->
+              <article class="problem-card" data-ps="ps05" id="ps05" role="button" tabindex="0" aria-label="View details for PS05: AI-Powered Digital Investigation Assistant">
+                <div class="ps-card-media">
+                  <img src="../assets/images/problem-statements/ps05_ai_assistant.jpg" alt="AI-Powered Digital Investigation Assistant" class="ps-card-img" loading="lazy" />
+                  <div class="ps-media-overlay">
+                    <span class="ps-media-badge"><span class="ps-media-dot"></span> Round 2 Live</span>
+                  </div>
+                </div>
+                <div class="ps-card-body">
+                  <p class="ps-label"><span class="ps-label-id">SUTRAMPS05</span> &middot; PROBLEM STATEMENT 5</p>
+                  <h3>AI-Powered Digital Investigation Assistant</h3>
+                  <p class="ps-desc">Conversational forensic assistant capable of natural language evidence querying, automated case summarization, anomaly detection, and draft reports.</p>
+                  <div class="ps-card-footer">
+                    <div class="ps-card-tags">
+                      <span>#ForensicAI</span>
+                      <span>#ExplainableAI</span>
+                    </div>
+                    <button type="button" class="ps-view-btn" data-open-ps="ps05" aria-label="View details for Problem Statement 5">View details &rarr;</button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div><!-- /.ps-cards-section -->
+
+          <!-- FINAL ROUND REQUIREMENTS SECTION -->
+          <section class="ps-outcomes-section">
+            <div class="ps-outcomes-grid">
+
+              <!-- Final Round Demonstration Requirements -->
+              <div class="ps-outcomes-card ps-requirements-card">
+                <div class="ps-outcomes-header">
+                  <span class="ps-card-svg-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  </span>
+                  <h3>Final Round Demonstration Requirements</h3>
+                </div>
+                <p class="ps-outcomes-intro">All teams reaching the final round will be required to demonstrate comprehensive technical rigor:</p>
+                <ul class="ps-requirements-list">
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </span>
+                    <div>
+                      <strong>Working Prototype</strong>
+                      <span>Functional execution of core AI &amp; forensic modules</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <div>
+                      <strong>Source Code</strong>
+                      <span>Clean, well-documented, reproducible repository</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </span>
+                    <div>
+                      <strong>Documentation</strong>
+                      <span>Forensic methodologies, setup manuals, and architecture</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    </span>
+                    <div>
+                      <strong>Investigation Dataset</strong>
+                      <span>Benchmark sample data illustrating parsing and analysis</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                    </span>
+                    <div>
+                      <strong>Cybercrime Scenario Demo</strong>
+                      <span>Live demonstration using a realistic cybercrime scenario</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="req-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                    </span>
+                    <div>
+                      <strong>LEA Deployment Roadmap</strong>
+                      <span>Practical rollout strategy for police and FSL stakeholders</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </section>
 
         </div>
       </section>
+
+      <!-- PROBLEM STATEMENT DETAIL MODAL -->
+      <div class="ps-modal" id="psModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="ps-modal-overlay" id="psModalOverlay"></div>
+        <div class="ps-modal-dialog">
+          <div class="ps-modal-header">
+            <div class="ps-modal-meta">
+              <span class="ps-modal-id" id="modalPsId">SUTRAMPS01</span>
+              <span class="ps-modal-badge" id="modalPsTrack">Problem Statement 1</span>
+            </div>
+            <button type="button" class="ps-modal-close" id="modalCloseBtn" aria-label="Close details">&times;</button>
+          </div>
+
+          <div class="ps-modal-scroll">
+            <h2 class="ps-modal-title" id="modalPsTitle">AI-Assisted Mobile Evidence Intelligence Platform</h2>
+
+            <div class="ps-modal-section">
+              <h3 class="ps-modal-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Problem Description
+              </h3>
+              <p class="ps-modal-desc" id="modalPsDesc"></p>
+            </div>
+
+            <div class="ps-modal-section">
+              <h3 class="ps-modal-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Challenge
+              </h3>
+              <ul class="ps-modal-list ps-challenge-list" id="modalPsChallenge"></ul>
+            </div>
+
+            <div class="ps-modal-section">
+              <h3 class="ps-modal-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Expected Deliverables
+              </h3>
+              <ul class="ps-modal-list ps-deliverables-list" id="modalPsDeliverables"></ul>
+            </div>
+
+            <div class="ps-modal-tags-wrap" id="modalPsTags"></div>
+          </div>
+
+          <div class="ps-modal-footer">
+            <a class="ps-modal-btn-download" href="../SUTRAM_2026_Problem_Statements.pdf?v=20261028" download="SUTRAM_2026_Problem_Statements.pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download PDF
+            </a>
+            <a class="ps-modal-btn-register" href="https://faas.isea.app/formview/Hackathon2026" target="_blank" rel="noopener">
+              Register / Submit Idea ↗
+            </a>
+            <button type="button" class="ps-modal-btn-close" id="modalFooterCloseBtn">Close</button>
+          </div>
+        </div>
+      </div>
 
 
       <!-- FOOTER -->
@@ -222,15 +452,21 @@
             <h2>Contact Us</h2>
             <div class="contact-list">
               <a href="mailto:isea@igdtuw.ac.in" class="contact-link-item">
-                <span class="contact-icon-badge" aria-hidden="true">📧</span>
+                <span class="contact-icon-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span>
                 <span>isea@igdtuw.ac.in</span>
               </a>
               <a href="tel:+919311434225" class="contact-link-item">
-                <span class="contact-icon-badge" aria-hidden="true">📞</span>
+                <span class="contact-icon-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
                 <span>+91 9311434225</span>
               </a>
               <div class="contact-link-item">
-                <span class="contact-icon-badge" aria-hidden="true">🏛</span>
+                <span class="contact-icon-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 10h1"></path><path d="M9 14h1"></path><path d="M14 10h1"></path><path d="M14 14h1"></path></svg>
+                </span>
                 <span>Indira Gandhi Delhi Technical University for Women, James Church, New Church Rd, Opp. St, Kashmere Gate, New Delhi, Delhi 110006</span>
               </div>
             </div>
@@ -333,5 +569,6 @@
 
   <script src="../js/main.js"></script>
   <script src="../js/ps-framework-sim.js"></script>
+  <script src="../js/ps-forensics.js"></script>
 </body>
 </html>

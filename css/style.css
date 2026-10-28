@@ -828,18 +828,20 @@ a {
 .notification-marquee {
   width: 100%;
   margin: 0;
-  background: rgba(238, 242, 255, 0.85);
+  background: rgba(238, 242, 255, 0.92);
   backdrop-filter: blur(10px);
-  padding: 10px 0;
+  padding: 9px 0;
   color: #1e1b4b;
-  font-family: var(--font-heading);
+  font-family: var(--font-heading, sans-serif);
   font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  border-top: 1px solid rgba(79, 70, 229, 0.15);
-  border-bottom: 1px solid rgba(79, 70, 229, 0.15);
+  font-size: 13.5px;
+  letter-spacing: 0.03em;
+  border-top: 1px solid rgba(79, 70, 229, 0.18);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.18);
   overflow: hidden;
   white-space: nowrap;
+  z-index: 90;
+  position: relative;
 }
 
 /* Moving container */
@@ -849,18 +851,104 @@ a {
   white-space: nowrap;
 }
 
+.marquee-css:hover .marquee-css-track {
+  animation-play-state: paused;
+}
+
 /* Moving text */
 .marquee-css-track {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
   padding-left: 100%;
-  animation: sutramMarquee 18s linear infinite;
+  animation: sutramMarquee 32s linear infinite;
 }
 
 /* Text */
 .marquee-text {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: #1e1b4b;
+}
+
+/* Clickable Marquee Notification Links */
+.marquee-badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #1d4ed8 !important;
+  border: 1px solid #60a5fa !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.marquee-badge-link:hover {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #93c5fd !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.6);
+  transform: translateY(-1px);
+}
+
+.marquee-badge-link.pulse-accent {
+  background: #dc2626 !important;
+  border: 1px solid #fca5a5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.marquee-badge-link.pulse-accent:hover {
+  background: #b91c1c !important;
+  color: #ffffff !important;
+  border-color: #fecaca !important;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.6);
+}
+
+.marquee-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: radarBlink 1.4s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+.marquee-divider {
+  display: inline-block;
+  margin: 0 16px;
+  color: #818cf8;
+  opacity: 0.65;
+  font-size: 11px;
+}
+
+[data-theme="dark"] .marquee-badge-link {
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(99, 102, 241, 0.38);
+  color: #a5b4fc !important;
+}
+
+[data-theme="dark"] .marquee-badge-link:hover {
+  background: #4f46e5;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .marquee-badge-link.pulse-accent {
+  background: rgba(239, 68, 68, 0.20);
+  border-color: rgba(239, 68, 68, 0.40);
+  color: #fca5a5 !important;
+}
+
+[data-theme="dark"] .marquee-badge-link.pulse-accent:hover {
+  background: #ef4444;
+  color: #ffffff !important;
 }
 
 /* HACKATHON highlight */
