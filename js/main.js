@@ -249,7 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // All timeline rendering (navbar dropdown + vertical Timeline page +
   // countdown) is driven off today's real date.
-  const referenceToday = new Date().toISOString().slice(0, 10);
+  const localToday = new Date();
+  const referenceToday = [localToday.getFullYear(), String(localToday.getMonth() + 1).padStart(2, "0"), String(localToday.getDate()).padStart(2, "0")].join("-");
 
   function renderTimelineDropdowns() {
     // Milestones are tagged with data-timeline-group (rows in the same
@@ -304,15 +305,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       nodes.forEach((node, i) => {
         const nodeDate = node.getAttribute("data-date");
+        const nodeEndDate = node.getAttribute("data-end-date") || nodeDate;
         const statusEl = node.querySelector("[data-vtl-status]");
         let status = "upcoming";
 
         node.classList.remove("done", "current", "upcoming");
 
-        if (nodeDate <= referenceToday) {
+        if (nodeEndDate < referenceToday) {
           status = "done";
           doneCount++;
-        } else if (currentIndex === -1) {
+        } else if (nodeDate <= referenceToday && currentIndex === -1) {
+          status = "current";
+          currentIndex = i;
+        } else if (nodeDate > referenceToday && currentIndex === -1) {
           status = "current";
           currentIndex = i;
         }
@@ -399,6 +404,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const fixedLabel = box.getAttribute("data-vtl-fixed-label");
 
       let targetDateStr = fixedTarget;
+      let displayDateStr = fixedTarget;
+      let targetIsRangeEnd = false;
       let milestoneLabel = fixedLabel;
 
       if (!targetDateStr) {
@@ -408,15 +415,20 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
         const milestoneName = currentNode.querySelector(".vtl-card-milestone");
-        targetDateStr = currentNode.getAttribute("data-date");
+        const rangeEndDate = currentNode.getAttribute("data-end-date");
+        targetDateStr = rangeEndDate || currentNode.getAttribute("data-date");
+        displayDateStr = targetDateStr;
+        targetIsRangeEnd = Boolean(rangeEndDate);
         milestoneLabel = milestoneName ? milestoneName.textContent : "Next milestone";
       }
 
-      const targetMs = new Date(`${targetDateStr}T00:00:00`).getTime();
+      const targetDate = new Date(`${targetDateStr}T00:00:00`);
+      if (targetIsRangeEnd) targetDate.setDate(targetDate.getDate() + 1);
+      const targetMs = targetDate.getTime();
 
       if (labelEl) labelEl.textContent = `${milestoneLabel || "Milestone"} in`;
       if (dateEl) {
-        dateEl.textContent = new Date(targetMs).toLocaleDateString("en-IN", {
+        dateEl.textContent = new Date(`${displayDateStr}T00:00:00`).toLocaleDateString("en-IN", {
           weekday: "long", day: "numeric", month: "long", year: "numeric",
         });
       }
@@ -1303,7 +1315,5 @@ document.addEventListener("DOMContentLoaded", () => {
     manageCanvas();
   }
 });
-
-
 
 

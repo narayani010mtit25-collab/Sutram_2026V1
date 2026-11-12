@@ -14075,6 +14075,20 @@ html[data-theme="light"] .track {
   margin-bottom: 24px;
 }
 
+.evaluation-round-tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  border: 1px solid rgba(37, 117, 252, 0.2);
+  border-radius: 999px;
+  background: rgba(37, 117, 252, 0.08);
+  color: #2575fc;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .evaluation-matrix-heading h2 {
   margin: 10px 0 8px;
   color: #0e2247;
