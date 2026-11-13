@@ -15542,7 +15542,7 @@ body.nav-locked {
   width: max-content;
   max-width: none;
   padding-left: 0;
-  animation: marqueeSlide 22s linear infinite;
+  animation: marqueeSlide 50s linear infinite;
   will-change: transform;
 }
 .marquee-css:hover .marquee-css-track,
@@ -16288,4 +16288,216 @@ textarea {
   border-color: rgba(0, 229, 255, 0.28);
   background: rgba(0, 229, 255, 0.04);
   color: var(--hx-dim, #cbd5e1);
+}
+
+/* Mobile fit for the journey, evaluation and timeline pages. */
+@media (max-width: 600px) {
+  .journey-hero-content {
+    width: 100%;
+    padding: 48px 18px 42px;
+  }
+
+  .journey-hero h1 {
+    font-size: clamp(36px, 11vw, 48px);
+    overflow-wrap: anywhere;
+  }
+
+  .journey-line {
+    gap: 8px;
+  }
+
+  .journey-line small {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .journey-line span {
+    width: 22px;
+    flex: 0 0 22px;
+  }
+
+  .journey-section {
+    width: calc(100% - 32px);
+  }
+
+  .journey-heading {
+    display: block;
+    margin-bottom: 34px;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .journey-heading p {
+    margin-top: 16px;
+  }
+
+  .journey-step,
+  .journey-step-reverse {
+    min-width: 0;
+    padding-left: 54px;
+  }
+
+  .journey-timeline::before {
+    left: 20px;
+  }
+
+  .journey-marker {
+    left: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .journey-card,
+  .journey-step-reverse .journey-card {
+    min-width: 0;
+    padding: 18px 16px;
+  }
+
+  .journey-card-bottom {
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .evaluation-matrix-wrap {
+    min-width: 0;
+    padding: 20px 14px;
+  }
+
+  .evaluation-matrix-heading h2 {
+    font-size: 28px;
+  }
+
+  .evaluation-matrix {
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 12px;
+  }
+
+  .evaluation-matrix th,
+  .evaluation-matrix td {
+    padding: 12px 8px;
+    overflow-wrap: anywhere;
+  }
+
+  .evaluation-matrix thead th:last-child,
+  .evaluation-matrix td:last-child {
+    width: 62px;
+  }
+
+  .stage-card {
+    min-width: 0;
+    padding: 20px 16px;
+  }
+
+  .stage-card-header {
+    align-items: flex-start;
+  }
+
+  .stage-card-header-left {
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .stage-card-title {
+    overflow-wrap: anywhere;
+  }
+
+  .stage-mini-timeline {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stage-mini-track {
+    display: none;
+  }
+
+  .stage-milestone {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .stage-milestone-content {
+    align-items: flex-start;
+    max-width: none;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .stage-milestone-label,
+  .stage-milestone-date {
+    overflow-wrap: anywhere;
+  }
+
+  .stage-countdown-row {
+    min-width: 0;
+  }
+
+  .stage-card .vtl-countdown-clock {
+    width: 100%;
+    gap: 3px;
+    justify-content: space-between;
+  }
+
+  .stage-card .vtl-countdown-unit {
+    flex: 1 1 0;
+    min-width: 0 !important;
+    padding: 7px 2px 8px !important;
+  }
+
+  .stage-card .vtl-countdown-value {
+    font-size: clamp(20px, 7vw, 28px) !important;
+  }
+
+  .stage-card .vtl-countdown-sep {
+    font-size: 16px !important;
+  }
+
+  .vtl-timeline {
+    min-width: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .vtl-progress-bar {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .vtl-progress-label {
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .vtl-track {
+    padding-left: 36px;
+  }
+
+  .vtl-track-line,
+  .vtl-track-fill {
+    left: 10px;
+  }
+
+  .vtl-node {
+    left: -36px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .vtl-card {
+    min-width: 0;
+    padding: 14px 14px 12px;
+  }
+
+  .vtl-card-milestone,
+  .vtl-card-detail p {
+    overflow-wrap: anywhere;
+  }
+
+  .vtl-card-date {
+    font-size: 11px;
+  }
 }
