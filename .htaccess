@@ -42,8 +42,15 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.html$">
+  <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    # Forces browsers to revalidate with the server via ETags/Last-Modified.
+    # If unchanged: instant 304 Not Modified response (0 body bytes).
+    # If changed: delivers fresh code immediately, eliminating stale-cache issues
+    # even when team members forget to manually bump ?v= query strings.
+    Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
 

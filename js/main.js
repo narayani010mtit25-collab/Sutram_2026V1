@@ -324,7 +324,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         node.classList.add(status);
         if (statusEl) {
-          statusEl.textContent = status === "done" ? "Completed" : status === "current" ? "Up Next" : "Upcoming";
+          if (status === "done") {
+            statusEl.textContent = "Completed";
+          } else if (status === "current") {
+            statusEl.textContent = nodeDate <= referenceToday ? "Live Now" : "Up Next";
+          } else {
+            statusEl.textContent = "Upcoming";
+          }
         }
       });
 
